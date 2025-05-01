@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Приглашение на мероприятие</title>
+  <title>Выпускной 2025 — Семья Мырзабек</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
       color: #fff;
       scroll-behavior: smooth;
     }
@@ -22,26 +21,29 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #111;
+      background: rgba(0, 0, 0, 0.8);
       padding: 10px;
       text-align: center;
       z-index: 1000;
     }
     nav a {
-      color: #00bfff;
+      color: #00ffff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
     h1, h2 {
-      color: #00bfff;
+      color: #00ffff;
+    }
+    ul li {
+      margin-bottom: 10px;
     }
     .countdown {
       font-size: 24px;
       margin-top: 20px;
     }
     .map-link {
-      color: #00bfff;
+      color: #00ffff;
       text-decoration: underline;
     }
   </style>
@@ -49,31 +51,36 @@
 <body>
 
 <nav>
-  <a href="#about">О мероприятии</a>
+  <a href="#about">О событии</a>
   <a href="#place">Место</a>
   <a href="#schedule">Программа</a>
   <a href="#countdown">Отсчёт</a>
 </nav>
 
 <section id="about">
-  <h1>Добро пожаловать!</h1>
-  <p>Приглашаем вас на наше мероприятие — <strong>Tech Vision 2025</strong>, которое состоится в Астане.</p>
-  <p>Дата: <strong>25 мая 2025 года</strong>, начало в 15:00</p>
+  <h1>Двойной праздник выпускников!</h1>
+  <p>Дорогие друзья и родные!<br>
+  Приглашаем вас отпраздновать важное событие для нашей семьи — <strong>выпускной двух сыновей</strong>:
+  один завершает обучение в <strong>Назарбаев Университете</strong>, другой — в <strong>НИШ</strong>.</p>
+  <p>Будем рады видеть вас на вечере, полном гордости, благодарности и радости!</p>
+  <p><strong>Дата:</strong> 4 июля 2025 года<br>
+     <strong>Время:</strong> начало в 19:00</p>
 </section>
 
 <section id="place">
   <h2>Место проведения</h2>
-  <p>г. Астана, проспект Назарбаева, 10</p>
-  <p><a class="map-link" href="https://2gis.kz/astana/geo/70030001038712499" target="_blank">Открыть в 2ГИС</a></p>
+  <p>Астана Молл, Event Hall, г. Астана</p>
+  <p><a class="map-link" href="https://2gis.kz/astana/geo/70000001076826568" target="_blank">Посмотреть в 2ГИС</a></p>
 </section>
 
 <section id="schedule">
   <h2>Программа</h2>
   <ul>
-    <li>15:00 – Регистрация</li>
-    <li>15:30 – Открытие</li>
-    <li>16:00 – Выступления спикеров</li>
-    <li>18:00 – Нетворкинг и фуршет</li>
+    <li>19:00 — Сбор гостей и фотосессия</li>
+    <li>19:30 — Торжественная часть</li>
+    <li>20:00 — Выступления родителей и учителей</li>
+    <li>20:30 — Ужин и праздничная программа</li>
+    <li>22:00 — Музыка, танцы и веселье!</li>
   </ul>
 </section>
 
@@ -83,7 +90,7 @@
 </section>
 
 <script>
-  const eventDate = new Date("2025-05-25T15:00:00").getTime();
+  const eventDate = new Date("2025-07-04T19:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
@@ -100,7 +107,7 @@
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("timer").innerHTML =
-      `${days} д. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+      ${days} д. ${hours} ч. ${minutes} мин. ${seconds} сек.;
   }
 
   setInterval(updateCountdown, 1000);
